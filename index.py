@@ -40,7 +40,7 @@ end = random.choice([' i promise to be serious with my studies and skills learni
 
 ###### HEIGHT AND WEIGHT ############################
 
-start_1_1 = random.choice(['height is something that makes a man handsome ', 'humans often have the height of ',
+start_1_1 = random.choice(['height is something that makes a man handsome, example, having a height of  ', 'humans often have the height of ',
                            'most animals that stand on two legs and eat other animals have the height of and not only '])
 
 start_1_2 = random.choice([' not only height matters, but weight also add a lot to humans, some humans have the weight of ',
@@ -51,6 +51,39 @@ mid_1_1 = random.choice([' let\'s not forget that obesity is measured with the h
 
 end_1_1 = random.choice(
     [' finally, make sure say u dey drink enough water if you want to get enough height', ' my advice to you is that you should start drinking enough water cause you are weightless'])
+
+
+###################OCCUPATION AND HOBBY ##############################
+
+start_2_1 = random.choice(['occupation is what someone does for a living such as being a/an ',
+                           'I know someone who is a ', 'the occupation i hate most is being a '])
+
+mid_2_1 = random.choice([' besides occupation, one can have a hobby such as ',
+                         ' there are many kinds of hobbies, example '])
+
+end_2_1 = random.choice([' in conclusion let\'s not mistake occupation for hobby cause that is not what it is.',
+                         ' the world would have been a better place if people can convert their hobby to their occupation'])
+
+######################### COMPLEXION AND RACE ################################
+
+start_3_1 = random.choice(['people can be either of any complextion such as being ',
+                           'your complexion is determined my your skin colour which can be '])
+
+mid_3_1 = random.choice([' people\'s complextion most times is an evident of them being of any race like ',
+                         ' do not feel superior if your race is ', ' you need to go for a thanksgiving if you\'re not from this race called '])
+
+end_3_1 = ' finally, all races are collectively called the human race'
+
+################################ CITY AND COUNTRY ###################################
+
+start_4_1 = random.choice([' is a very beautiful city that everyone loves', ' is the deadliest city in the world',
+                           ' is a primitive village that deserves not to be graded as a city'])
+
+mid_4_1 = random.choice([' the city is located in the funny country where no one is ever happy, the geographical location called ',
+                         ' very little persons would ever want to identify with the country where the city is located called '])
+
+end_4_1 = random.choice([' thank you so much for reading through the irrelevant story',
+                         ' it seems you are jobless and that\'s why you read through this story, thanks anyway'])
 
 randomQuestions = random.choice(questions)
 
@@ -63,16 +96,22 @@ if randomQuestions == name_age:
 elif randomQuestions == height_weight:
     height_and_weight = height_weight()
 
+    print(start_1_1 + height_and_weight[0] + start_1_2 +
+          height_and_weight[1] + mid_1_1 + end_1_1)
+
 elif randomQuestions == occupation_hobby:
     occupation_and_hobby = occupation_hobby()
 
-    print(occupation_and_hobby)
+    print(start_2_1 + occupation_and_hobby[0] +
+          mid_2_1 + occupation_and_hobby[1] + end_2_1)
 
 elif randomQuestions == complextion_race:
     complextion_and_race = complextion_race()
 
-    print(complextion_and_race)
+    print(start_3_1 + complextion_and_race[0] +
+          mid_3_1 + complextion_and_race[1] + end_3_1)
 else:
     city_and_country = city_country()
 
-    print(city_and_country)
+    print(city_and_country[0] + start_4_1 +
+          mid_4_1 + city_and_country[1] + end_4_1)
