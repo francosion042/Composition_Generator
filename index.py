@@ -22,8 +22,6 @@ def compose():
               name_and_age[1] + 'years.' + mid + end + '\n')
         if prompt() == 'y' or 'yes':
             compose()
-        else:
-            break
 
     elif randomQuestions == height_weight:
         height_and_weight = height_weight()
@@ -32,8 +30,6 @@ def compose():
               height_and_weight[1] + mid_1_1 + end_1_1 + '\n')
         if prompt() == 'y' or 'yes':
             compose()
-        else:
-            break
 
     elif randomQuestions == occupation_hobby:
         occupation_and_hobby = occupation_hobby()
